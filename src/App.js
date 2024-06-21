@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import ItemList from './ItemList';
+
+import Create from './componet/Create';
+import Read from './componet/Read';
+import Edit from './componet/Edit';
 
 function App() {
   return (
-    <div className="App">
-    <ItemList/>
+    <div className='container'>
+      <Routes>
+        <Route exact path='/'element={<Read/>}/>
+        <Route exact path='/create'element={<Create/>}/>
+        <Route exact path='/edit'element={<Edit/>}/>
+      </Routes>
+      
+     
     </div>
   );
 }
